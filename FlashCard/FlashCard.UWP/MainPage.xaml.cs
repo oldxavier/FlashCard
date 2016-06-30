@@ -31,20 +31,5 @@ namespace FlashCard.UWP
         {
             textBlock.Text = textBox.Text;
         }
-
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-
-        }
     }
 }
