@@ -8,9 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="213,104,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" FontSize="36" Width="418" TextChanged="textBox_TextChanged"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="361,227,0,0" VerticalAlignment="Top" FontSize="36" Click="button_Click" PointerEntered="button_PointerEntered" Background="#33C81F1F"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="213,332,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="36" Width="418" Height="61" SelectionChanged="textBlock_SelectionChanged"/>
-
+        <TextBlock x:Name="questionText" Text="{x:Bind Path=CurrentCard.Question, Mode=OneWay}" Width="auto" HorizontalAlignment="Center" Margin="10,50,10,10" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="answerText" Text="{x:Bind Path=CurrentCard.Answer, Mode=OneWay}" Width="auto" HorizontalAlignment="Center" Margin="10,100,10,10" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
 </Page>

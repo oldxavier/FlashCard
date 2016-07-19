@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlashCard.UWP.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,29 +23,13 @@ namespace FlashCard.UWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public Card CurrentCard { get; set; }
+
         public MainPage()
         {
             this.InitializeComponent();
-        }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            textBlock.Text = textBox.Text;
-        }
-
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-
+            this.CurrentCard = new Card("Magyarország", "Budapest");
         }
     }
 }
