@@ -23,14 +23,14 @@ namespace FlashCard.UWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public Card CurrentCard { get; set; }
+        //public Card CurrentCard { get; set; }
         public CardCollection CurrentCollection { get; set; }
 
         public MainPage()
         {
             this.InitializeComponent();
 
-            this.CurrentCard = new Card("Magyarország", "Budapest");
+            //this.CurrentCard = new Card("Magyarország", "Budapest");
 
             this.CurrentCollection = new CardCollection("Kepler-törvények");
             CurrentCollection.Cards.Add(new Card(
