@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="listView" ItemsSource="{x:Bind CurrentCollection.Cards}">
+        <ListView x:Name="listView" ItemsSource="{x:Bind ViewModel.CardCollections[0].Cards}">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="models:Card">
                     <StackPanel Margin="20,20,0,20">
