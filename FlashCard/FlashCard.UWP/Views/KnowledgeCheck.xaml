@@ -1,0 +1,115 @@
+﻿<Page
+    x:Class="FlashCard.UWP.Views.KnowledgeCheck"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlashCard.UWP.Views"
+    xmlns:models="using:FlashCard.UWP.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--Grid Layer 0-->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="13*" />
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Text="FlashCard" Foreground="#FFF17366" FontSize="20" TextAlignment="Center" />
+        <TextBlock Grid.Row="1" Text="Kepler-törvények" Foreground="#FFF17366" FontSize="24" TextAlignment="Center" />
+
+        --><!--Grid Layer 1--><!--
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            --><!--<FlipView Holding="{x:Bind Answer}" Grid.Row="0" Grid.Column="1"/>--><!--
+            <Button Content="Kepler első törvénye" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="24" Background="#ffffff" />
+            <Button Content="(" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="80" Background="#FFF17366" />
+            <Button Content=")" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="80" Background="#6f9948" />
+
+            <Rectangle Grid.Row="1">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF17366" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            
+            <Rectangle Grid.Row="1" Grid.Column="2">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#6f9948" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+
+
+            --><!--<StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" >
+                    <Button Content="Helytelen" />
+                    <Button Content="Helyes" />
+
+                    <TextBlock Text="Helytelen"/>
+                    <TextBlock Text="Helyes"/>
+                </StackPanel>-->
+
+            <!--Grid Layer 2--><!--
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Content="Helytelen" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="24" Background="#FFF17366" Margin="2.5,10,2.5,5" />
+                <Button Content="Helyes" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="24" Background="#6f9948" Margin="2.5,10,2.5,5" />
+
+
+
+            </Grid>
+        </Grid>-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3.5*" />
+            <ColumnDefinition Width="3.5*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="FlashCard" />
+        <TextBlock x:Name="CollectionName" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="Kepler-törvények" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button x:Name="IncorrectSideButton" Grid.Row="2" Grid.Column="0" Content="&lt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="IncorrectButton_Click" />
+        <Rectangle x:Name="Card" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <TextBlock x:Name="CardText" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="Kepler első törvénye" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="CorrectSideButton" Grid.Row="2" Grid.Column="4" Content="&gt;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="CorrectButton_Click" />
+        <Button x:Name="IncorrectButton" Grid.Row="3" Grid.Column="1" Content="Helytelen" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="IncorrectButton_Click" />
+        <Button x:Name="CorrectButton" Grid.Row="3" Grid.Column="2" Content="Helyes" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="CorrectButton_Click" />
+        <TextBlock x:Name="Result" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+    </Grid>
+</Page>

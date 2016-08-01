@@ -1,5 +1,6 @@
 ﻿using FlashCard.UWP.Models;
 using FlashCard.UWP.ViewModels;
+using FlashCard.UWP.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,6 +32,12 @@ namespace FlashCard.UWP
             this.InitializeComponent();
 
             this.ViewModel = new ViewModels.MainPageViewModel();
+        }
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(KnowledgeCheck));
         }
     }
 }
